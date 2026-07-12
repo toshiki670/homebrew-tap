@@ -8,11 +8,8 @@ class Dotfiles < Formula
   depends_on "rust" => :build
 
   def install
-    # root Cargo.toml is both the workspace root AND the `dotfiles` package (the single
-    # distributable — tools/dotfiles-lint and tools/v-sync are dev-only workspace members
-    # that also carry bin targets). `cargo install` disambiguates a multi-package source
-    # via the positional crate name; without it this fails with "multiple packages with
-    # binaries found".
+    # the workspace's tools/ members also carry bin targets, so the package name
+    # must be given explicitly or this fails with "multiple packages with binaries found".
     system "cargo", "install", *std_cargo_args, "dotfiles"
   end
 
