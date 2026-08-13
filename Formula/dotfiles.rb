@@ -1,8 +1,8 @@
 class Dotfiles < Formula
   desc "Personal dotfiles CLI plus companion Rust commands"
   homepage "https://github.com/toshiki670/dotfiles"
-  url "https://github.com/toshiki670/dotfiles/archive/refs/tags/v0.71.11.tar.gz"
-  sha256 "b611f23ba4013dac04dc7e58d83b390c9b5898b4d4106f7d0f97cf7dd9a60265"
+  url "https://github.com/toshiki670/dotfiles/archive/refs/tags/v0.71.12.tar.gz"
+  sha256 "9b0cde41b8503740471d95198e3d353c733a39b109274e0d376b60b98a25495a"
   license "MIT"
 
   depends_on "rust" => :build
